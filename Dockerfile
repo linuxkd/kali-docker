@@ -15,19 +15,15 @@ RUN ln -s /usr/bin/python3 /usr/bin/python
 RUN service postgresql start && msfdb init && service postgresql stop
 VOLUME /root /var/lib/postgresql
 
-# grab atu dotfiles
-#RUN git clone https://github.com/atucom/dotfiles /root/atu-dotfiles
-
-# grab base zshrc
-#RUN curl -s https://raw.githubusercontent.com/linuxkd/dotfiles/master/.zshrc_docker --output /etc/skel/.zshrc
-#RUN cp /etc/skel/.zshrc /root/.zshrc
-
 # expose common ports
 EXPOSE 53
 EXPOSE 53/udp
 EXPOSE 80
 EXPOSE 443
 EXPOSE 4444
+EXPOSE 5555
+EXPOSE 8080
+EXPOSE 8443
 
 WORKDIR /root
 CMD ["/bin/bash"]
