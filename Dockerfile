@@ -1,3 +1,7 @@
+# Dockerfile for running Kali with a reasonable number of tools installed in docker in a sane manner.
+# Drew Blokzyl (@linuxkd)
+# https://github.com/linuxkd/kali-docker
+
 # base kali-rolling image to start with
 FROM kalilinux/kali-rolling:latest
 

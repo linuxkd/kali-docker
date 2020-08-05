@@ -4,6 +4,7 @@
 # by Drew Blokzyl (@linuxkd)
 # https://github.com/linuxkd/kali-docker/
 
+# Update and install docker and jq, then start docker service
 sudo yum update -y
 sudo yum install -y docker jq
 sudo service docker start
