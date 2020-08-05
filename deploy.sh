@@ -27,3 +27,6 @@ sudo ln -s "$mount_path" /pentest/kali-root
 curl -s "https://raw.githubusercontent.com/linuxkd/kali-docker/master/kali" --output /tmp/kali
 chmod +x /tmp/kali
 sudo mv /tmp/kali /usr/local/bin
+
+# Append our path for root to be able to find the script
+echo -e "\n$PATH=$PATH:/usr/local/bin" | sudo tee -a /root/.bashrc
