@@ -9,6 +9,10 @@ FROM kalilinux/kali-rolling:latest
 ENV DEBIAN_FRONTEND noninteractive
 ENV LANG en_US.UTF-8
 
+# timezone data
+ENV TZ=America/New_York
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
 # prep for install
 RUN apt update -y && apt dist-upgrade -y
 
