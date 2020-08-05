@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 # This file is light wrapper for running Kali in docker in a sane manner.
 # Drew Blokzyl (@linuxkd)
