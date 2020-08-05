@@ -8,6 +8,7 @@
 sudo yum update -y
 sudo yum install -y docker jq
 sudo service docker start
+sudo systemctl enable docker
 
 # Create an image named kali from the specified Dockerfile
 sudo docker build -t kali-image https://raw.githubusercontent.com/linuxkd/kali-docker/master/Dockerfile
