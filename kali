@@ -1,0 +1,13 @@
+#/bin/bash
+
+# This file is light wrapper for running Kali in docker in a sane manner.
+# Drew Blokzyl (@linuxkd)
+# https://github.com/linuxkd/kali-docker
+
+container_name="kali"
+if [[ "$( docker container inspect -f '{{.State.Running}}' $container_name )" == "true" ]]; then
+    sudo docker exec -ti kali bash
+else
+    sudo docker start kali
+    sudo docker exec -ti kali bash
+fi
